@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start:local": "sls invoke local -f puppeteer"
+    "start:local": "tsc && sls offline start"
   },
   "keywords": [],
   "author": "",
@@ -14,10 +14,14 @@
     "@types/node": "^22.15.14",
     "esbuild": "^0.25.4",
     "serverless": "^4.14.3",
+    "serverless-localstack": "^1.3.1",
     "serverless-offline": "^14.4.0",
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "puppeteer": "^24.8.1"
+    "@aws-sdk/client-sqs": "^3.804.0",
+    "@serverless/utils": "^6.15.0",
+    "puppeteer": "^24.8.1",
+    "serverless-offline-sqs": "^8.0.0"
   }
 }
